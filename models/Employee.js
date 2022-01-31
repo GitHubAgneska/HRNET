@@ -15,22 +15,28 @@ const EmployeeSchema = new mongoose.Schema({
     required: true
   },
   start_date: {
-    type: Date
+    type: Date,
+    required: true
   },
   dob_date: {
-    type: Date
+    type: Date,
+    required: true
   },
   street: {
-    type: String
+    type: String,
+    required: true
   },
   city: {
-    type: String
+    type: String,
+    required: true
   },
   state: {
-    type: String
+    type: String,
+    required: true
   },
   zipcode: {
-    type: String
+    type: String,
+    required: true
   }
 });
 

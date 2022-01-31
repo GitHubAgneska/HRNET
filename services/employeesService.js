@@ -17,7 +17,7 @@ module.exports.createEmployee = async employeeData => {
             lastName: employeeData.lastName,
             department: employeeData.department,
             start_date:  employeeData.start_date,
-            dob_date: employeeData.dob,
+            dob_date: employeeData.dob_date,
             street: employeeData.street,
             city: employeeData.city,
             state: employeeData.state,
