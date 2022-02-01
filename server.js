@@ -22,7 +22,7 @@ const uri = process.env.MONGO_URI
 const localDbUrl = process.env.DATABASE_URL_DEV
 // Connect to Mongo
 mongoose
-    .connect( "mongodb+srv://agneska:qIabKYA9NqzBEhVO@cluster0.o1p30.mongodb.net/hrnet?retryWrites=true&w=majority", {
+    .connect(uri , {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
