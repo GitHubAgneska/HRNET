@@ -3,7 +3,8 @@ require('dotenv').config()
 const cors = require('cors')
 const path = require('path')
 const config = require('./config')
-const { PORT } = config;
+// const { PORT } = config;
+const PORT = process.env.PORT || 5000
 const favicon = require('serve-favicon')
 
 // routes
@@ -21,10 +22,10 @@ const uri = process.env.MONGO_URI
 const localDbUrl = process.env.DATABASE_URL_DEV
 // Connect to Mongo
 mongoose
-    .connect(uri, {
+    .connect(process.env.MONGO_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true
-    }) // Adding new mongo url parser
+    })
     .then(() => console.log('MongoDB Connected...'))
     .catch(err => console.log(err));
 
