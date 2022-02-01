@@ -1,3 +1,7 @@
+/* ---------------------------------------------- */
+/* FOR TEST PURPOSES > to test api/db connection  */
+/* ---------------------------------------------- */
+
 const axios = require('axios')
 //const fetch = require('node-fetch');
 const api = 'http://localhost:5000/api/employees'

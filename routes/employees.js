@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Employee = require('../models/Employee')
 const employeesController = require('../controllers/employeesController')
+
 /**
  * @route   GET api/employees
  * @desc    Get all employees

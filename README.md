@@ -5,15 +5,16 @@
 
 
 ### ▶︎ STACK
-- HTML5/CSS3
+
 - React / Redux
+- Express
+- MongoDb
 
 --- 
 
 ###  ▶︎ TOOLS
-- MirageJs + FakerJs
-- LightHouse
-- Jest/Testing-library
+- FakerJs
+
 
 ---
 ###  ▶︎ INSTALL
