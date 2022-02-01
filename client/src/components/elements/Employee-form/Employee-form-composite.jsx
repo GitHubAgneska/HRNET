@@ -18,7 +18,7 @@ import { FormWrapper, StyledForm, FieldsWrapper, FormBtnsWrapper } from './Emplo
 
 const CompositeForm = () => {
 
-    const initialState = {firstName: '', lastName:'', dob:'', startDate:'',  street:'', city:'', zipcode: '', state: { name:'', abbreviation:''}, department:''};
+    const initialState = {firstName: '', lastName:'', dob_date:'', start_date:'',  street:'', city:'', zipcode: '', state: { name:'', abbreviation:''}, department:''};
     
     const [ values, setValues ] = useState({ ...initialState})
     const [ touched, setTouched ] = useState({})

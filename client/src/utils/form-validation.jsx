@@ -4,8 +4,8 @@ import { validate } from  './form_validators'
 let values = { 
     firstName: 'Lester',
     lastName :'Nygaard',
-    dob: '1964-11-11',
-    startdate: '2004-11-11',
+    dob_date: '1964-11-11',
+    start_date: '2004-11-11',
     street: '613 Willow Creek Drive',
     city: 'Bemidji',
     state: 'Minnesota',

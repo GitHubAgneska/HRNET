@@ -2,7 +2,7 @@ import { initialState  } from '../store'
 import produce from 'immer'
 import {
     SET_EMPLOYEE, SET_FIRSTNAME, SET_LASTNAME,
-    SET_DOB, SET_STARTDATE, SET_STREET, SET_CITY,
+    SET_dob_date, SET_start_date, SET_STREET, SET_CITY,
     SET_USSTATE, SET_ZIPCODE, SET_DEPARTMENT,
     EMPLOYEE_GET_FETCHING, EMPLOYEE_GET_RESOLVED, EMPLOYEE_GET_REJECTED
 } from  '../actions/actions-types'
@@ -17,8 +17,8 @@ export default function employeeReducer(state = initialState.employee, action) {
             case SET_EMPLOYEE: { draft.employee = action.payload; return }
             case SET_FIRSTNAME: { draft.firstName = action.payload; return }
             case SET_LASTNAME: { draft.lastName = action.payload; return}
-            case SET_DOB: { draft.dob = action.payload; return }
-            case SET_STARTDATE: { draft.startDate = action.payload; return }
+            case SET_dob_date: { draft.dob_date = action.payload; return }
+            case SET_start_date: { draft.start_date = action.payload; return }
             case SET_STREET: { draft.street = action.payload; return }
             case SET_CITY: { draft.city = action.payload; return }
             case SET_USSTATE: { draft.state = action.payload; return }

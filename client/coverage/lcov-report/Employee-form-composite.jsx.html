@@ -444,7 +444,7 @@ import { modalTypes } from '../../../data/modal-types'
 &nbsp;
 const CompositeForm = () =&gt; {
     
-    const [ values, setValues ] = useState({ firstName: '', lastName:'', dob:'', startDate:'',  street:'', city:'', zipcode: '', state:'', department:''});
+    const [ values, setValues ] = useState({ firstName: '', lastName:'', dob_date:'', start_date:'',  street:'', city:'', zipcode: '', state:'', department:''});
     const [ touched, setTouched ] = useState({});
     const [ errors, setErrors ] = useState({});
 &nbsp;
@@ -535,7 +535,7 @@ const CompositeForm = () =&gt; {
     }
 &nbsp;
     const resetForm = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >        setValues({firstName: '', lastName:'', dob:'', startDate:'',  street:'', city:'', zipcode: '', state:'', department:''}); </span>
+<span class="cstat-no" title="statement not covered" >        setValues({firstName: '', lastName:'', dob_date:'', start_date:'',  street:'', city:'', zipcode: '', state:'', department:''}); </span>
 <span class="cstat-no" title="statement not covered" >        setTouched({});</span>
 <span class="cstat-no" title="statement not covered" >        setErrors({});</span>
 <span class="cstat-no" title="statement not covered" >        console.log('AFTER RESET: values==', values, 'errors=', errors, 'touched=', touched);</span>

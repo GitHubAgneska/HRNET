@@ -1,9 +1,9 @@
 export class EmployeeModel {
-    constructor(firstName, lastName, dob, startDate, address, department) {
+    constructor(firstName, lastName, dob_date, start_date, address, department) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.dob = dob;
-        this.startDate = startDate;
+        this.dob_date = dob_date;
+        this.start_date = start_date;
         this.address = new EmployeeAddressModel(address.street, address.city, address.state, address.zipcode);
         this.department =department;
     }

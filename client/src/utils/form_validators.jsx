@@ -29,12 +29,12 @@ const dateValidation = (fieldName, fieldValue) => {
     let date = fieldValue
 
     let todaysDate = today().toString();
-    let min=fieldName === 'dob' ? '1940-01-01':'2000-01-01'
-    let max=fieldName === 'dob' ? '2000-01-01': todaysDate
+    let min=fieldName === 'dob_date' ? '1940-01-01':'2000-01-01'
+    let max=fieldName === 'dob_date' ? '2000-01-01': todaysDate
 
     if ( date.trim()=== '' ) { return 'date is required'}
     if ( date < min || date > max ) { return 'date is not valid'}
-    // console.log('dob/startdate OK')
+    // console.log('dob_date/start_date OK')
     return null;
 }
 
@@ -89,8 +89,8 @@ export const validate = {
 
     firstName: firstName => nameValidation('firstName', firstName),
     lastName: lastName => nameValidation('lastName', lastName),
-    dob: dob => dateValidation('dob', dob),
-    startDate: startDate => dateValidation('startDate', startDate),
+    dob_date: dob_date => dateValidation('dob_date', dob_date),
+    start_date: start_date => dateValidation('start_date', start_date),
     street: street => streetValidation('street', street),
     city: city => cityValidation('city', city),
     state: state => stateValidation('state', state),
@@ -99,7 +99,7 @@ export const validate = {
 
 };
 
-// startdate input => set max to today
+// start_date input => set max to today
 export const today = () => {
 
     let today = new Date();

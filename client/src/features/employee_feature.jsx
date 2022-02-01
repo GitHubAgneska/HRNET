@@ -1,7 +1,7 @@
 import { listState } from '../state/store'
 import {
     // PUT REQUEST --
-    /*  setEmployee, setFirstName, setLastName,setDob, setStartDate, setStreet,
+    /*  setEmployee, setFirstName, setLastName,setdob_date, setstart_date, setStreet,
     setCity, setUsState, setZipcode, setDepartment,
     employeeFetching, employeeResolved, employeeRejected, 
     setCollection,

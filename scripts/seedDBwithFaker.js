@@ -30,7 +30,7 @@ const api = 'http://localhost:5000/api/employees'
             lastName: faker.name.lastName(),
             department: faker.random.arrayElement([ 'engineering', 'human resources', 'legal', 'marketing', 'sales' ]),
             start_date: faker.date.past(10, new Date()),
-            dob_date: faker.date.past(50, new Date()),
+            dob_date_date: faker.date.past(50, new Date()),
             street: (faker.datatype.number()).toString() + ' ' + faker.address.streetName(),
             city: faker.address.city(),
             state: randomState.name,

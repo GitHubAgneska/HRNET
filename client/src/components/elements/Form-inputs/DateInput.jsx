@@ -22,8 +22,8 @@ const DateInput = ({field, fieldName, handleInputChange, handleBlur, errors, tou
                 onChange={e => handleInputChange(field.fieldName, e.target.value)}
                 onBlur={e => handleBlur(field.fieldName, e.target.value)} 
                 aria-required="true"
-                min={fieldName === 'dob' ? '1940-01-01':'2000-01-01'}
-                max={fieldName === 'dob' ? '2000-01-01': todaysDate}
+                min={fieldName === 'dob_date' ? '1940-01-01':'2000-01-01'}
+                max={fieldName === 'dob_date' ? '2000-01-01': todaysDate}
                 touched={touched}
                 style={{border: valid? '2px solid #42f5a4': invalid ? '1px solid red': ''}}
             />

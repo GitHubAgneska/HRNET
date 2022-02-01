@@ -13745,13 +13745,13 @@
       "lighthouse-core/audits/byte-efficiency/legacy-javascript.js | description": [
         "audits[legacy-javascript].description"
       ],
-      "lighthouse-core/audits/dobetterweb/dom-size.js | title": [
+      "lighthouse-core/audits/dob_dateetterweb/dom-size.js | title": [
         "audits[dom-size].title"
       ],
-      "lighthouse-core/audits/dobetterweb/dom-size.js | description": [
+      "lighthouse-core/audits/dob_dateetterweb/dom-size.js | description": [
         "audits[dom-size].description"
       ],
-      "lighthouse-core/audits/dobetterweb/dom-size.js | displayValue": [
+      "lighthouse-core/audits/dob_dateetterweb/dom-size.js | displayValue": [
         {
           "values": {
             "itemCount": 112
@@ -13759,37 +13759,37 @@
           "path": "audits[dom-size].displayValue"
         }
       ],
-      "lighthouse-core/audits/dobetterweb/dom-size.js | columnStatistic": [
+      "lighthouse-core/audits/dob_dateetterweb/dom-size.js | columnStatistic": [
         "audits[dom-size].details.headings[0].text"
       ],
-      "lighthouse-core/audits/dobetterweb/dom-size.js | columnValue": [
+      "lighthouse-core/audits/dob_dateetterweb/dom-size.js | columnValue": [
         "audits[dom-size].details.headings[2].text"
       ],
-      "lighthouse-core/audits/dobetterweb/dom-size.js | statisticDOMElements": [
+      "lighthouse-core/audits/dob_dateetterweb/dom-size.js | statisticDOMElements": [
         "audits[dom-size].details.items[0].statistic"
       ],
-      "lighthouse-core/audits/dobetterweb/dom-size.js | statisticDOMDepth": [
+      "lighthouse-core/audits/dob_dateetterweb/dom-size.js | statisticDOMDepth": [
         "audits[dom-size].details.items[1].statistic"
       ],
-      "lighthouse-core/audits/dobetterweb/dom-size.js | statisticDOMWidth": [
+      "lighthouse-core/audits/dob_dateetterweb/dom-size.js | statisticDOMWidth": [
         "audits[dom-size].details.items[2].statistic"
       ],
-      "lighthouse-core/audits/dobetterweb/no-document-write.js | title": [
+      "lighthouse-core/audits/dob_dateetterweb/no-document-write.js | title": [
         "audits[no-document-write].title"
       ],
-      "lighthouse-core/audits/dobetterweb/no-document-write.js | description": [
+      "lighthouse-core/audits/dob_dateetterweb/no-document-write.js | description": [
         "audits[no-document-write].description"
       ],
-      "lighthouse-core/audits/dobetterweb/uses-http2.js | title": [
+      "lighthouse-core/audits/dob_dateetterweb/uses-http2.js | title": [
         "audits[uses-http2].title"
       ],
-      "lighthouse-core/audits/dobetterweb/uses-http2.js | description": [
+      "lighthouse-core/audits/dob_dateetterweb/uses-http2.js | description": [
         "audits[uses-http2].description"
       ],
-      "lighthouse-core/audits/dobetterweb/uses-passive-event-listeners.js | title": [
+      "lighthouse-core/audits/dob_dateetterweb/uses-passive-event-listeners.js | title": [
         "audits[uses-passive-event-listeners].title"
       ],
-      "lighthouse-core/audits/dobetterweb/uses-passive-event-listeners.js | description": [
+      "lighthouse-core/audits/dob_dateetterweb/uses-passive-event-listeners.js | description": [
         "audits[uses-passive-event-listeners].description"
       ],
       "lighthouse-core/config/default-config.js | performanceCategoryTitle": [

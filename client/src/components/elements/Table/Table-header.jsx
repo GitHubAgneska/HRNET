@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TableHeaderIconWrapper } from './Table_style'
 import { titleFormat }  from '../../../utils/title_formator'
 
-let headers = [ 'firstName', 'lastName', 'dob', 'startDate', 'street', 'city', 'state', 'zipcode', 'department']
+let headers = [ 'firstName', 'lastName', 'dob_date', 'start_date', 'street', 'city', 'state', 'zipcode', 'department']
 
 const TableHeader = ( { sortListBy } ) => { 
 

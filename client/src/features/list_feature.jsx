@@ -1,4 +1,5 @@
 import { store, listState } from '../state/store'
+import axios from 'axios';
 import { 
     listFetching, listResolved, listRejected,
     setCollection,
@@ -25,10 +26,11 @@ export async function fetchList(dispatch, getState) { // rtk = createAsyncThunk
     dispatch(listFetching())
 
     try {
-        const response = await fetch('/api/employees/')
-        const data = await response
+        const response = await fetch('/api/employees')
+        const data = await response.json()
+        console.log('RES=>', data)
         dispatch(listResolved(data))
-        dispatch(setCollection(data.employees))   // set default collection to all list
+        dispatch(setCollection(data))   // set default collection to all list
         dispatch(changeEntriesAmount(15))         // set default entries to 15
     }
     catch (error) {

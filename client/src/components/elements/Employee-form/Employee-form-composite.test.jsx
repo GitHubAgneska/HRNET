@@ -10,8 +10,8 @@ import { store } from '../../../state/store'
 const userMock = {
     firstName: 'Lester',
     lastName :'Nygaard',
-    dob: '1964-11-11',
-    startdate: '2004-11-11',
+    dob_date: '1964-11-11',
+    start_date: '2004-11-11',
     street: '613 Willow Creek Drive',
     city: 'Bemidji',
     state: 'Minnesota',
@@ -57,8 +57,8 @@ describe('form testing', () => {
         const { container } = render(<Provider store={store}><CompositeForm onClick={setValues} /></Provider>)
         container.querySelector('input', { name: 'firstName' }).value = 'Lester'
         container.querySelector('input', { name: 'lastName' }).value = 'Nygaard'
-        container.querySelector('input', { name: 'dob' }).value = '1964-11-11'
-        container.querySelector('input', { name: 'startdate' }).value = '2004-11-11'
+        container.querySelector('input', { name: 'dob_date' }).value = '1964-11-11'
+        container.querySelector('input', { name: 'start_date' }).value = '2004-11-11'
         container.querySelector('input', { name: 'street' }).value = '613 Willow Creek Drive'
         container.querySelector('input', { name: 'city' }).value = 'Bemidji'
         container.querySelector('select', { name: 'state' }).value = 'Minnesota'
@@ -77,8 +77,8 @@ describe('form testing', () => {
         const { container } = render(<Provider store={store}><CompositeForm onClick={setValues} /></Provider>)
         container.querySelector('input', { name: 'firstName' }).value = 'Le99er'
         container.querySelector('input', { name: 'lastName' }).value = 'Nygaard'
-        container.querySelector('input', { name: 'dob' }).value = '1964-11-11'
-        container.querySelector('input', { name: 'startdate' }).value = '2004-11-11'
+        container.querySelector('input', { name: 'dob_date' }).value = '1964-11-11'
+        container.querySelector('input', { name: 'start_date' }).value = '2004-11-11'
         container.querySelector('input', { name: 'street' }).value = '613 Willow Creek Drive'
         container.querySelector('input', { name: 'city' }).value = 'Bemidji'
         container.querySelector('select', { name: 'state' }).value = 'Minnesota'
@@ -140,8 +140,8 @@ describe('form testing', () => {
         
         container.querySelector('input', { name: 'firstName' }).value = 'Lester'
         container.querySelector('input', { name: 'lastName' }).value = 'Nygaard'
-        container.querySelector('input', { name: 'dob' }).value = '1964-11-11'
-        container.querySelector('input', { name: 'startdate' }).value = '2004-11-11'
+        container.querySelector('input', { name: 'dob_date' }).value = '1964-11-11'
+        container.querySelector('input', { name: 'start_date' }).value = '2004-11-11'
         container.querySelector('input', { name: 'street' }).value = '613 Willow Creek Drive'
         container.querySelector('input', { name: 'city' }).value = 'Bemidji'
         container.querySelector('select', { name: 'state' }).value = 'Minnesota'
@@ -165,7 +165,7 @@ describe('form testing', () => {
             // let itemField = screen.getByLabelText(key) // -> does not find form controls associated -- 
             key === 'firstName' || 'lastName' ?
                 itemField = container.querySelector('input', { name: key })
-                :  key === 'dob' || 'startdate' ?
+                :  key === 'dob_date' || 'start_date' ?
                 itemField = container.querySelector('date', { name: key })
                 : itemField = container.querySelector('select', { name: key })
             
@@ -192,7 +192,7 @@ describe('form testing', () => {
             // let itemField = screen.getByLabelText(key) // -> does not find form controls associated -- 
             key === 'firstName' || 'lastName' ?
                 itemField = container.querySelector('input', { name: key })
-                :  key === 'dob' || 'startdate' ?
+                :  key === 'dob_date' || 'start_date' ?
                 itemField = container.querySelector('date', { name: key })
                 : itemField = container.querySelector('select', { name: key })
             
@@ -213,8 +213,8 @@ describe('form testing', () => {
         const { container } = render(<Provider store={store}><CompositeForm onClick={setValues} /></Provider>)
         container.querySelector('input', { name: 'firstName' }).value = 'Lester'
         container.querySelector('input', { name: 'lastName' }).value = 'Nygaard'
-        container.querySelector('input', { name: 'dob' }).value = '1964-11-11'
-        container.querySelector('input', { name: 'startdate' }).value = '2004-11-11'
+        container.querySelector('input', { name: 'dob_date' }).value = '1964-11-11'
+        container.querySelector('input', { name: 'start_date' }).value = '2004-11-11'
         container.querySelector('input', { name: 'street' }).value = '613 Willow Creek Drive'
         container.querySelector('input', { name: 'city' }).value = 'Bemidji'
         container.querySelector('select', { name: 'state' }).value = 'Minnesota'

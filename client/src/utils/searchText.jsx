@@ -10,7 +10,7 @@ export const searchSuggestions = (query, list) => {
     list.forEach(obj => {
         let objectValue = ''
         for (let [key, value] of Object.entries(obj)) {
-            if ( key === 'dob' || key === 'startDate' ) { objectValue = moment(value).format('MM/DD/YYYY') }
+            if ( key === 'dob_date' || key === 'start_date' ) { objectValue = moment(value).format('MM/DD/YYYY') }
             else if ( key === 'state' ) { objectValue = value.name }
             else if ( key === 'id' ) { objectValue = value.toString() }
             else { objectValue = value }

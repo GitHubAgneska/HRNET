@@ -8,7 +8,7 @@ const Table = ({currentPageToDisplay, sortListBy}) => {
 
     const currentQuery = useSelector(initialState => initialState.list.searchTerm)
 
-    const tableHead = [ 'firstName', 'lastName', 'dob', 'startDate', 'street', 'city', 'state', 'zipcode', 'department']
+    const tableHead = [ 'firstName', 'lastName', 'dob_date', 'start_date', 'street', 'city', 'state', 'zipcode', 'department']
 
     /** @function tableRow 
      *  uses @type {Object} employee passed by @function tableData
@@ -27,7 +27,7 @@ const Table = ({currentPageToDisplay, sortListBy}) => {
         const columnData = tableCell.map( prop => {
             let valueToDisplay
             if ( key[prop].hasOwnProperty('name') ) { valueToDisplay = key[prop]['name'] }
-            else if ( prop === 'dob' || prop ==='startDate') { valueToDisplay = moment(key[prop]).format('MM/DD/YY') }
+            else if ( prop === 'dob_date' || prop ==='start_date') { valueToDisplay = moment(key[prop]).format('MM/DD/YY') }
             else { valueToDisplay = key[prop] }
             let match = false;
             if (currentQuery.length > 2 && valueToDisplay.toLowerCase().includes(currentQuery)  ) { match=true }

@@ -13,12 +13,12 @@ export const employeeFormFields = [
         _uid: "0c946643-5a83-4545-baea-055b27b51e8a",
     },
     {
-        fieldName: 'dob', 
+        fieldName: 'dob_date', 
         fieldType: 'date',
         _uid: "5b9b79d2-32f2-42a1-b89f-203dfc0b6b98"
     },
     {
-        fieldName: 'startDate',
+        fieldName: 'start_date',
         fieldType: 'date',
         _uid: "6eff3638-80a7-4427-b07b-4c1be1c6b186"
     },

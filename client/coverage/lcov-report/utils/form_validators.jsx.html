@@ -301,7 +301,7 @@ const dateValidation = <span class="fstat-no" title="function not covered" >(f</
     // format from input = YYYY-MM-DD
     let date = <span class="cstat-no" title="statement not covered" >fieldValue;</span>
 <span class="cstat-no" title="statement not covered" >    if ( date.trim()=== ''  ) { <span class="cstat-no" title="statement not covered" >return 'date is required'}</span></span>
-    // console.log('dob/startdate OK')
+    // console.log('dob_date/start_date OK')
 <span class="cstat-no" title="statement not covered" >    return null;</span>
 }
 &nbsp;
@@ -353,8 +353,8 @@ export const validate = {
 &nbsp;
     firstName: firstName =&gt; nameValidation('firstName', firstName),
     lastName: <span class="fstat-no" title="function not covered" >la</span>stName =&gt; <span class="cstat-no" title="statement not covered" >nameValidation('lastName', lastName),</span>
-    dob: <span class="fstat-no" title="function not covered" >do</span>b =&gt; <span class="cstat-no" title="statement not covered" >dateValidation('dob', dob),</span>
-    startDate: <span class="fstat-no" title="function not covered" >st</span>artDate =&gt; <span class="cstat-no" title="statement not covered" >dateValidation('startDate', startDate),</span>
+    dob_date: <span class="fstat-no" title="function not covered" >do</span>b =&gt; <span class="cstat-no" title="statement not covered" >dateValidation('dob_date', dob_date),</span>
+    start_date: <span class="fstat-no" title="function not covered" >st</span>artDate =&gt; <span class="cstat-no" title="statement not covered" >dateValidation('start_date', start_date),</span>
     street: <span class="fstat-no" title="function not covered" >st</span>reet =&gt; <span class="cstat-no" title="statement not covered" >streetValidation('street', street),</span>
     city: <span class="fstat-no" title="function not covered" >ci</span>ty =&gt; <span class="cstat-no" title="statement not covered" >cityValidation('city', city),</span>
     state: <span class="fstat-no" title="function not covered" >st</span>ate =&gt; <span class="cstat-no" title="statement not covered" >stateValidation('state', state),</span>
@@ -363,7 +363,7 @@ export const validate = {
 &nbsp;
 };
 &nbsp;
-// startdate input =&gt; set max to today
+// start_date input =&gt; set max to today
 export const today = () =&gt; { 
 &nbsp;
     let today = new Date();

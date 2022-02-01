@@ -18,7 +18,7 @@ const EmployeeSchema = new mongoose.Schema({
     type: Date,
     required: true
   },
-  dob_date: {
+  dob_date_date: {
     type: Date,
     required: true
   },

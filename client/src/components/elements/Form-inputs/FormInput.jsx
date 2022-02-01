@@ -63,7 +63,7 @@ const FormInput = props => {
                         aria-required="true"
                     /> 
                 }
-                { (fieldName ==='dob' || fieldName ==='startDate')
+                { (fieldName ==='dob_date' || fieldName ==='start_date')
                     &&    
                     <input
                         type="date"
