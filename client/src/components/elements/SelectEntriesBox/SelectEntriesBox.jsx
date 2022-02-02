@@ -1,23 +1,26 @@
 import { SelectEntriesBoxWrapper } from './SelectEntriesBox_style'
 import { useSelector } from 'react-redux'
 import PropTypes from "prop-types"
+import { useState } from 'react'
 
 const SelectEntriesBox = ({options, selectEntriesAmount, currentlyshowing, listTotal}) => {
 
     const currentEntries = useSelector(initialState => initialState.list.entries)
-
+    const [option,setOption] = useState(currentEntries)
+    const handleChange = e => { setOption(e.target.value); selectEntriesAmount(e.target.value) }
+    
     return (
         <SelectEntriesBoxWrapper>
 
             <label htmlFor="entries">Show per page: </label>
             <select 
-                options={options}
+                options={currentEntries}
                 name="entries"
-                value={currentEntries}
-                onChange={e => ( console.log(e.target.value))}
+                value={option}
+                onChange={handleChange}
                 aria-required="true">
                 { options.map(o => (
-                    <option key={Math.random()} onClick={() => {selectEntriesAmount(o)}}>{o}</option>
+                    <option key={Math.random()}>{o}</option>
                 ))}
             </select>
 
