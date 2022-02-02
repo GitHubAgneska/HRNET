@@ -39,8 +39,8 @@ export default function listReducer(state = initialState.list, action) {
             case LIST_RESOLVED: {
                 if ( draft.status === 'loading' || draft.status === 'updating') {
                     draft.status = 'resolved'
-                    draft.data = action.payload.employees
-                    if ( !draft.collection ) { draft.collection = action.payload.employees }
+                    draft.data = action.payload
+                    if ( !draft.collection ) { draft.collection = action.payload }
                     return 
                 }
                 return
