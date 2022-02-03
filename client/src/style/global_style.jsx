@@ -69,13 +69,15 @@ export const DataTableContentWrapper = styled.div`
     display: flex;
     flex-direction: column;
     padding: 2%;
-    
+
 `
 export const DataTableTopWrapper =  styled.div`
     display:flex;
     @media screen and (max-width:600px) {  flex-flow: column nowrap; }
     @media screen and (min-width:600px) { flex-flow: row nowrap; justify-content: space-between;}
     margin: 2% 0%;
+    @media screen and (max-width:600px) { margin-top: 6rem;}   
+    @media screen and (min-width:600px) {margin-top: 7rem;}  
 `
 
 /* accessibility - .sr-only class */

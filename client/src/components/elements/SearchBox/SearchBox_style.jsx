@@ -24,7 +24,7 @@ export const SearchBoxWrapper = styled.div`
     padding:1%;
     display: inline-flex;
     align-items: center;
-    svg { margin: 1%; }
+    svg { margin: 1%; color: #03846c !important; }
     
     ${({ suggestionsBoxIsActive }) => suggestionsBoxIsActive && 
     `
@@ -39,12 +39,13 @@ export const SearchBoxWrapper = styled.div`
 
 export const SearchBoxInput = styled.input`
     width: 95%; height: 25px;
+
     border: none !important;
     outline: none;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 0px 5px;
-    ::placeholder { font-weight: light; opacity: 0.8; }
-    :focus-within { border: 2px solid violet !important; }
+    ::placeholder { font-weight: light; opacity: 0.6;text-transform: uppercase; }
+    :focus-within { border: 2px solid #03846c !important; }
 `
 
 export const SearchSuggestionsWrapper = styled.div`
@@ -69,5 +70,4 @@ export const SearchSuggestionsWrapper = styled.div`
 
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
-
 `

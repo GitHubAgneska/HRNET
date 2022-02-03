@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const StyledNav = styled.nav`
     position:fixed; width: 100%; z-index:5;
-    padding: 3%
+    padding: 3%; height: 7vh;
     @media screen and (max-width:600px) {height:3rem;}
     @media screen and (min-width:600px) {height:3.5rem; }
     display: flex;
