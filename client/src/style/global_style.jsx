@@ -28,7 +28,11 @@ export const GlobalStyle = createGlobalStyle`
     ul { margin: 0; padding: 0;}
     ul li { list-style: none; }
     button { display: block; border: none; }
-    main { background-color: #cdcdcd;}
+    main {
+        background-color: #cdcdcd;
+        @media screen and (min-width:600px) { position: fixed; width: 100%;}
+    }
+    
 `
 // bg lightgrey : #cdcdcd
 // main green: #03846c
@@ -36,6 +40,7 @@ export const GlobalStyle = createGlobalStyle`
 
 
 export const TitleWrapper = styled.div`
+    position:fixed; width: 100%; z-index:5; top:3rem;
     @media screen and (max-width:600px) { height:45px; }
     @media screen and (min-width:600px) { height:50px; }
     display: flex;

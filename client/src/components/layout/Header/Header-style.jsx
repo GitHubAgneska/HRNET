@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 
 export const StyledNav = styled.nav`
-    @media screen and (min-width:600px) { /* width: 90%; margin: auto; */height: 8vh;}
-    @media screen and (max-width:600px) {height:3rem; padding: 3%}
+    position:fixed; width: 100%; z-index:5;
+    padding: 3%
+    @media screen and (max-width:600px) {height:3rem;}
+    @media screen and (min-width:600px) {height:3.5rem; }
     display: flex;
     flexFlow: row nowrap;
     justify-content: space-between;

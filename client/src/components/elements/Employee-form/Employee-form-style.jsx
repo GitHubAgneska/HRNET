@@ -3,7 +3,8 @@ import styled, {keyframes} from 'styled-components'
 export const FormWrapper = styled.div`
     @media screen and (min-width:600px) { padding: 2%;}  
     @media screen and (max-width:600px) { padding-bottom: 5%;}
-    color: white
+    color: white;
+    padding-top: 5%;
 `
 
 export const StyledForm = styled.form`
@@ -11,9 +12,10 @@ export const StyledForm = styled.form`
 `
 
 export const FieldsWrapper = styled.div`
+
     position: relative;
-    @media screen and (max-width:600px) { width:100%; }   
-    @media screen and (min-width:600px) { width:60%; height: 70vh;}  
+    @media screen and (max-width:600px) { width:100%; margin-top: 5rem;}   
+    @media screen and (min-width:600px) { width:60%; height: 70vh; margin-top: 7rem;}  
     
     margin: auto;
     overflow: scroll;
@@ -48,21 +50,21 @@ export const InputWrapper = styled.div`
     text-align: left;
 
     input:not([type='date']){ text-transform: capitalize; }
-    input, select { 
+    input, select {
+        padding: 8px;
         border: 1px solid #03846c;
-        :focus-within { border: 2px solid lightblue !important; }
+        :focus-within { border: 2px solid lightblue !important; box-shadow: rgba(0, 0, 0, 0.30) 0px 5px 10px; }
     }
 
     @media screen and (max-width:600px) {
         input, select {
-            padding: 8px;
+            
             font-size: 1em;
             border-radius: 10px;
         }
     }   
     @media screen and (min-width:600px) {
         input, select {
-            padding: 8px;
             font-size: .8em;
             border-radius: 10px;
             /* border: ${ ({valid}) => valid  ? ' 2px solid green;' :'2px solid lightgrey;' } */

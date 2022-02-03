@@ -218,7 +218,7 @@ const CompositeForm = () => {
                     ))}
                 </FieldsWrapper>
 
-                <FormBtnsWrapper style={{width: "60%"}}>
+                <FormBtnsWrapper style={{width: "90%"}}>
                     <Button btntype="action" btnName="save" handleClick={handleSubmit} disabled={!allFieldsOk} width="40%;"></Button>
                     <Button btntype="cancel" btnName="cancel" handleClick={handleCancel} disabled={!formDirty} width="40%;"></Button>
                 </FormBtnsWrapper>
