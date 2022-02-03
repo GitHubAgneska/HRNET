@@ -28,24 +28,28 @@ export const GlobalStyle = createGlobalStyle`
     ul { margin: 0; padding: 0;}
     ul li { list-style: none; }
     button { display: block; border: none; }
-    main {
-        background-color: #515151;        
-    }
+    main { background-color: #cdcdcd;}
 `
+// bg lightgrey : #cdcdcd
+// main green: #03846c
+// secondary light green #d9e8e5
+
 
 export const TitleWrapper = styled.div`
-    @media screen and (max-width:600px) { height:25px; }
-    @media screen and (min-width:600px) { height:40px; }
+    @media screen and (max-width:600px) { height:45px; }
+    @media screen and (min-width:600px) { height:50px; }
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: violet;
+    background-color: white; 
+    
 `
 
 export const StyledTitle = styled.h1`
-    color: white;
+    color:#03846c;
     font-size:1em;
     margin: 0;
+    text-transform: uppercase;
 `
 
 export const LoadingSpinnerWrapper = styled.div`

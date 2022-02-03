@@ -6,7 +6,7 @@ const CreateEmployee = () => {
     return (
         <EmployeeFormPageWrapper>
             <TitleWrapper>
-                <StyledTitle>Create a new employee</StyledTitle>
+                <StyledTitle>new employee</StyledTitle>
             </TitleWrapper>
             <CompositeForm />
         </EmployeeFormPageWrapper>

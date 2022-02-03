@@ -16,7 +16,14 @@ export const StyledBtn = styled.button`
     &:hover:not([disabled]){ box-shadow: rgba(0, 0, 0, 0.30) 0px 5px 10px; font-size: 1.2rem; }
     transition: all 0.2s;
 `
-    
+
+        
+/*  GREEN THEME => to implement
+${ props => props.btntype ==='action' ? 'background: linear-gradient(0deg, rgba(1,33,27,1) 0%, rgba(3,132,108,1) 100%);color:white;' :' background-color: white; color:#03846c;border:1px solid #03846c;' }
+&:disabled { ${ props => props.btntype ==='action' ? ' background-color: #d9e8e5 ' :'background-color: white; color:#03846c;border:1px solid #d9e8e5;' } }
+&:hover:not([disabled]){ box-shadow: rgba(0, 0, 0, 0.30) 0px 5px 10px; font-size: 1.2rem; }
+transition: all 0.2s; 
+*/
 
 
 /*  action => not disabled : #3150f9  - light blue */

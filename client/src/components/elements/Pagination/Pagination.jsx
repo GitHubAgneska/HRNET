@@ -1,7 +1,7 @@
-import { PaginationWrapper, PageNumber } from './Pagination_style'
+import { PaginationWrapper, PageNumber } from './Pagination_style'
 import PropTypes from "prop-types"
 
-const Pagination = ({totalPages, currentActivePage, changePage}) => { 
+const Pagination = ({totalPages, currentActivePage, changePage}) => {
 
     return (
 

@@ -8,7 +8,7 @@ export const StyledNav = styled.nav`
     justify-content: space-between;
     align-items: center;
     padding: 5px 20px;
-    background-color: lightgrey;
+    background-color: #03846c;
 `
 
 export const MainLogoWrapper = styled.div``
@@ -25,7 +25,7 @@ export const LinksWrapper = styled.div`
     @media screen and (max-width:600px) {display: inline-grid;text-align: left;}
     display: inline-flex;
     justify-content: flex-end;
-    a { margin-left: 10%; }
+    a { margin-left: 10%; color: white;}
     a:hover { text-decoration: underline;}
 
 `

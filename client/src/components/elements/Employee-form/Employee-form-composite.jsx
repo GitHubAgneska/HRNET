@@ -89,7 +89,8 @@ const CompositeForm = () => {
     }
 
     const handleRes = (myRes)  => {
-        if (myRes.status === 200) { setJustCreated({...values});  confirmCreation()}
+        // console.log('MYRES==>', myRes)
+        if (myRes.status === 200) { setJustCreated({...values});  confirmCreation(); }
     
         else if (myRes.status === 400) { 
             setExisting({...values});

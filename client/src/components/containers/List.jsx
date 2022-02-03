@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import { sortList, updatePage, changeEntriesAmount, requestSetSearchTerm } from "../../features/list_feature"
 import { setCollection } from '../../state/actions/Actions'
@@ -15,7 +15,11 @@ import { DataTablePageWrapper, DataTableContentWrapper,DataTableTopWrapper, Titl
 
 
 export const List = () => {
-    
+
+/*     useEffect(()=> {
+        if (listStatus !== 'resolved') dispatch(fetchList)
+    }, [dispatch, listStatus]) */
+
     const dispatch = useDispatch()
 
     const collection = useSelector(initialState => initialState.list.collection)

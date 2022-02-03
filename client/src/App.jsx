@@ -23,7 +23,6 @@ const override = css`
 
 const App = () => {
 
-
     const dispatch = useDispatch()
     const listStatus = useSelector(initialState => initialState.list.status)
     const pages = useSelector(initialState => initialState.list.collectionAsPages)
@@ -49,7 +48,7 @@ const App = () => {
                                 <Switch>
                                     <Route exact path="/"  render={() => <Redirect to="/create-employee" />} />
                                     <Route exact path="/create-employee" component={CreateEmployee} />
-                                        <Route exact path="/employees-list" component={List} />
+                                    <Route exact path="/employees-list" component={List} />
                                     <Route component={NotFoundPage} />
                                 </Switch>
                             </Fragment>

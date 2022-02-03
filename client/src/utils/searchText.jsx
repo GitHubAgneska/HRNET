@@ -10,7 +10,7 @@ export const searchSuggestions = (query, list) => {
 
     query = query.toLowerCase()
     list.forEach(obj => {
-        console.log('CURRENT OBJ >', obj)
+
         let objectValue = ''
         for (let [key, value] of Object.entries(obj)) {
             if ( key === 'dob_date' || key === 'start_date' ) { objectValue = moment(value).format('MM/DD/YYYY') }

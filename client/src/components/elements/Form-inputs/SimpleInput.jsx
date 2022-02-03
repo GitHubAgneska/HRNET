@@ -19,7 +19,7 @@ const SimpleInput = ({field, handleInputChange, handleBlur, errors, touched }) =
                 onChange={e => handleInputChange(field.fieldName, e.target.value)}
                 onBlur={e => handleBlur(field.fieldName, e.target.value)}
                 aria-required="true"
-                style={{border: valid? '2px solid #42f5a4': invalid ? '1px solid red': ''}}
+                style={{border: valid? '3px solid #42f5a4': invalid ? '3px solid red': ''}}
             />
             { valid && <IconWrapper><img src={checked} alt="checked-icon"/></IconWrapper> }
             { invalid && <IconWrapper><img src={error} alt="error-icon"/></IconWrapper> }

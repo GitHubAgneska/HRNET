@@ -23,7 +23,7 @@ const SelectInput = ({field, fieldName, values, options, handleInputChange, hand
                 onChange={e => handleInputChange(field.fieldName, e.target.value)}
                 onBlur={e => handleBlur(field.fieldName, e.target.value)}
                 aria-required="true"
-                style={{border: valid? '2px solid #42f5a4': invalid ? '1px solid red': ''}}
+                style={{border: valid? '3px solid #42f5a4': invalid ? '3px solid red': ''}}
                 >
                 { fieldName === 'state' && 
                     options.map(i => (
