@@ -2,16 +2,19 @@ import styled from "styled-components"
 
 export const SelectEntriesBoxWrapper = styled.div`
     color:white;
-    height: 45px;
+    padding: 3%;
     font-size:0.8rem;
     text-align: left;
     line-height: 2;
-    @media screen and (max-width:600px) {display: inline-block;  width:unset}
+    @media screen and (max-width:600px) {
+        display: inline-block; width:unset;
+        select { }
+
+    }
     select {
-        padding: 5px;
-        font-size: .8em;
-        border-radius: 20px;
-        border: 1px solid white;
+        @media screen and (max-width:600px) { padding: 2px; font-size: 1em;  border-radius: 5px; }
+        @media screen and (min-width:600px) {padding: 5px;  font-size: .8em; border-radius: 20px;}
+    
         background-color:white;
         :focus-within { border: 2px solid violet !important; }
         

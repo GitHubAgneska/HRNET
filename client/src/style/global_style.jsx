@@ -29,8 +29,7 @@ export const GlobalStyle = createGlobalStyle`
     ul li { list-style: none; }
     button { display: block; border: none; }
     main {
-        background-color: #515151;
-        height: 100vh;
+        background-color: #515151;        
     }
 `
 
@@ -57,9 +56,9 @@ export const EmployeeFormPageWrapper = styled.main``
 export const DataTablePageWrapper = styled.main``
 
 export const DataTableContentWrapper = styled.div`
+    height:100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 2%;
     
 `

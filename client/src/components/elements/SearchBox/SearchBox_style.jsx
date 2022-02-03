@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 export const SearchSectionWrapper = styled.section`
-    @media screen and (max-width:600px) {  width:100%; }
-    @media screen and (min-width:600px) {  width:50%; }
+    @media screen and (max-width:600px) { width:95%; }
+    @media screen and (min-width:600px) { width:50%; }
     transition: all 0.2s;
     
     ${({ suggestionsBoxIsActive }) => suggestionsBoxIsActive && 
@@ -11,13 +11,16 @@ export const SearchSectionWrapper = styled.section`
         z-index: 2;
         width: 60%;
         background-color: gray;
-        border-radius: 15px
+        border: 2px solid black;
+        border-radius: 15px;
+        box-shadow: 2px 21px 30px black
     `}
 `
 
 export const SearchBoxWrapper = styled.div`
     width: 100%;
-    height: 30px;
+    @media screen and (max-width:600px) { height: 35px;}
+    @media screen and (min-width:600px) { height: 30px;}
     padding:1%;
     display: inline-flex;
     align-items: center;
@@ -27,6 +30,7 @@ export const SearchBoxWrapper = styled.div`
     `
         border-top-right-radius: 15px;
         border-top-left-radius: 15px;
+        border-color: black;
     `}
     
     ${({ suggestionsBoxIsActive }) => !suggestionsBoxIsActive && 
@@ -44,7 +48,7 @@ export const SearchBoxInput = styled.input`
 `
 
 export const SearchSuggestionsWrapper = styled.div`
-    border: 2px solid #ccc;
+   /*  border: 2px solid black; */
     text-align: justify;
     color: white;
     ul {
@@ -54,6 +58,7 @@ export const SearchSuggestionsWrapper = styled.div`
             align-items: center;
             padding: 1%;
             font-size: 0.8rem;
+            font-weight: bold;
             &:hover { background-color: #ccc; color:black; }
         }
         li:not(:first-child) { border-top: 1px solid #ccc; }
