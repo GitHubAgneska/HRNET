@@ -7,8 +7,9 @@ import { fetchList } from './features/list_feature'
 
 import Header from './components/layout/Header/Header'
 import CreateEmployee from './components/containers/Create-employee'
-import List from './components/containers/List';
+import ListPage from './components/containers/List-page'
 import NotFoundPage from './components/containers/404'
+import HomePage from './components/containers/Home-page';
 
 import { GlobalStyle, LoadingSpinnerWrapper } from './style/global_style'
 
@@ -46,9 +47,10 @@ const App = () => {
                         { proceed ?
                             <Fragment>
                                 <Switch>
-                                    <Route exact path="/"  render={() => <Redirect to="/create-employee" />} />
+                                    <Route exact path="/"  render={() => <Redirect to="/home" />} />
+                                    <Route exact path="/home" component={HomePage} />
                                     <Route exact path="/create-employee" component={CreateEmployee} />
-                                    <Route exact path="/employees-list" component={List} />
+                                    <Route exact path="/employees-list" component={ListPage} />
                                     <Route component={NotFoundPage} />
                                 </Switch>
                             </Fragment>

@@ -58,7 +58,7 @@ export const StyledTitle = styled.h1`
 `
 
 export const LoadingSpinnerWrapper = styled.div`
-    margin-top:10%;
+    margin-top:15vh;
 `
 
 export const EmployeeFormPageWrapper = styled.main``
