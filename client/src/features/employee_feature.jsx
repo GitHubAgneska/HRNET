@@ -12,10 +12,14 @@ import { changeEntriesAmount } from './list_feature'
 
 
 /**
+ * 
  * @route   POST /
  * @desc    Create an employee
  * @access  Public
- */
+ * 
+ * @param {object} employee
+ * @returns {Promise<object>} response JSON
+ */  
 // Thunk function : necessary to pass employee object using thunk creator
 export function createEmployee(employee) {
 
@@ -37,10 +41,11 @@ export function createEmployee(employee) {
                 body: JSON.stringify(employee)
             });
 
-            const data = await response
-            dispatch(createEmployeeResolved(data)) // => set post status to resolved + update collection
+            const responseObj = await response.json() // => status / message / body
+
+            dispatch(createEmployeeResolved(responseObj)) // => set post status to resolved + update collection
             dispatch(changeEntriesAmount(15))
-            return response
+            return responseObj
         }
         catch(error) {
             dispatch(createEmployeeRejected(error))

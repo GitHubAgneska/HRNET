@@ -27,7 +27,7 @@ export async function fetchList(dispatch, getState) { // rtk = createAsyncThunk
     try {
         const response = await fetch('/api/employees')
         const data = await response.json()
-        console.log('RES=>', data)
+        
         dispatch(listResolved(data))
         dispatch(setCollection(data))   // set default collection to all list
         dispatch(changeEntriesAmount(15))// set default entries to 15

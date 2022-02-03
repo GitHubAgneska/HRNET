@@ -16,6 +16,7 @@ import useModal from '../Modal/useModal'
 
 import { FormWrapper, StyledForm, FieldsWrapper, FormBtnsWrapper } from './Employee-form-style'
 
+
 const CompositeForm = () => {
 
     const initialState = {firstName: '', lastName:'', dob_date:'', start_date:'',  street:'', city:'', zipcode: '', state: { name:'', abbreviation:''}, department:''};
@@ -78,32 +79,27 @@ const CompositeForm = () => {
              && Object.values(formValidation.touched).length === Object.values(values).length // all fields were touched
              && Object.values(formValidation.touched).every(t => t === true ) // every touched field is true
             ) {
-                let exists = checkExists(values.lastName)
-                if (exists) {
-                    setExisting({...values})
-                    setErrorCreation({error: 'exists', firstName:values.firstName, lastName:values.lastName, department: values.department})
-                    // setIsLoading(false)
-                    toggleWarningModal()
-                }
-                else {
-                    let state = {} // us-state property should be an object (not possible in select input)
-                    state.name = values.state
-                    let newEmployee = {...values, state }
-
-                    dispatch(createEmployee(newEmployee))
-                        .then(response => setJustCreated({...response.employee}))
-                        .then(setIsLoading(false))
-                        .then(confirmCreation())
-                        .catch(error => setErrorCreation(error))
-                }
+                //let state = {} // us-state property should be an object (not possible in select input)
+                //state.name = values.state
+                let newEmployee = {...values}
+                
+                dispatch(createEmployee(newEmployee))
+                    .then(response => handleRes(response))
             }
-            setIsLoading(false)
     }
 
-    const checkExists = (requestedLastName) => {
-        let exists = collection.filter(employee => employee.lastName.toLowerCase() === requestedLastName.toLowerCase()).length !==0
-        return exists
+    const handleRes = (myRes)  => {
+        if (myRes.status === 200) { setJustCreated({...values});  confirmCreation()}
+    
+        else if (myRes.status === 400) { 
+            setExisting({...values});
+            setErrorCreation({error: 'exists', firstName:values.firstName, lastName:values.lastName, department: values.department})
+            toggleWarningModal()
+        }
+        else { setErrorCreation({error: myRes.message}); }
+        setIsLoading(false)
     }
+
     
     const navigateToList = () => {
         history.push('./employees-list')

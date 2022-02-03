@@ -3,7 +3,7 @@ const Employee = require('../models/Employee')
 module.exports.createEmployee = async employeeData => {
     try {
         const employee = await Employee.findOne({ lastName: employeeData.lastName })
-        if (employee) { throw new Error('employee with lastName already exists') }
+        if (employee) { throw new Error('employee with this name already exists') }
 
         // ISSUE HERE : 'await' makes password NULL and prevents request to succeed
         // Postman err : '400 - Error: data and salt arguments required' 
@@ -17,7 +17,7 @@ module.exports.createEmployee = async employeeData => {
             lastName: employeeData.lastName,
             department: employeeData.department,
             start_date:  employeeData.start_date,
-            dob_date_date: employeeData.dob_date_date,
+            dob_date: employeeData.dob_date,
             street: employeeData.street,
             city: employeeData.city,
             state: employeeData.state,
