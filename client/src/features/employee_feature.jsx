@@ -42,9 +42,13 @@ export function createEmployee(employee) {
             });
 
             const responseObj = await response.json() // => status / message / body
-
-            dispatch(createEmployeeResolved(responseObj)) // => set post status to resolved + update collection
-            dispatch(changeEntriesAmount(15))
+            
+            if ( responseObj === 200) {
+                dispatch(createEmployeeResolved(responseObj)) // => set post status to resolved + update collection
+                dispatch(changeEntriesAmount(15))
+            } else { 
+                dispatch(createEmployeeRejected(responseObj.message))
+            }
             return responseObj
         }
         catch(error) {

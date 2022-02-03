@@ -73,7 +73,7 @@ export default function listReducer(state = initialState.list, action) {
                 return
             }
             case CREATE_EMPLOYEE_RESOLVED: {
-                // console.log('EMPLOYEE_CREATE_RESOLVED ACTION CALLED')
+                // console.log('EMPLOYEE_CREATE_RESOLVED => PAYLOAD==', action.payload, action.payload.employee)
                 if ( draft.post_status === 'pending' || draft.post_status === 'updating') {
                     draft.post_status = 'resolved'
                     let newEmployee = action.payload.employee
@@ -85,6 +85,7 @@ export default function listReducer(state = initialState.list, action) {
                 return
             }
             case CREATE_EMPLOYEE_REJECTED: {
+                // console.log('CREATE_EMPLOYEE_REJECTED => PAYLOAD==', action.payload )
                 if ( draft.post_status === 'pending' || draft.post_status === 'updating') {
                     // set to rejected, save error, delete data
                     draft.post_status = 'rejected'

@@ -2,12 +2,15 @@ import moment from 'moment'
 
 export const searchSuggestions = (query, list) => {
 
+    console.log('SEARCHING IN=>', list)
+
     let suggested = [];
     let suggestions = new Map()
     let reg = new RegExp(query, 'gi')
 
     query = query.toLowerCase()
     list.forEach(obj => {
+        console.log('CURRENT OBJ >', obj)
         let objectValue = ''
         for (let [key, value] of Object.entries(obj)) {
             if ( key === 'dob_date' || key === 'start_date' ) { objectValue = moment(value).format('MM/DD/YYYY') }
