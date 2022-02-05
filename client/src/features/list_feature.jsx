@@ -31,6 +31,7 @@ export async function fetchList(dispatch, getState) { // rtk = createAsyncThunk
         dispatch(listResolved(data))
         dispatch(setCollection(data))   // set default collection to all list
         dispatch(changeEntriesAmount(15))// set default entries to 15
+        return
     }
     catch (error) {
         dispatch(listRejected(error))

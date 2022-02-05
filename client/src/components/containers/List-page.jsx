@@ -18,10 +18,12 @@ const ListPage = () => {
     const dispatch = useDispatch()
     const listStatus = useSelector(initialState => initialState.list.status)
     const pages = useSelector(initialState => initialState.list.collectionAsPages)
+    const postStatus = useSelector(initialState => initialState.list.post_status)
 
+    // list will fetch/refetch if listStatus or postStatus change
     useEffect(()=> {
-        if (listStatus !== 'resolved') dispatch(fetchList)
-    }, [dispatch, listStatus])
+        if (listStatus !== 'resolved' || postStatus !== 'void' ) dispatch(fetchList)
+    })
 
     // wait for pagination to be set (depends on initial fetch resolving)
     let proceed = false;
