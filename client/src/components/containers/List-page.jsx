@@ -19,10 +19,11 @@ const ListPage = () => {
     const listStatus = useSelector(initialState => initialState.list.status)
     const pages = useSelector(initialState => initialState.list.collectionAsPages)
     const postStatus = useSelector(initialState => initialState.list.post_status)
-
+    const searchIsActive = useSelector(initialState => initialState.list.searchActive)
+    
     // list will fetch/refetch if listStatus or postStatus change
     useEffect(()=> {
-        if (listStatus !== 'resolved' || postStatus !== 'void' ) dispatch(fetchList)
+        if (listStatus !== 'resolved' || postStatus !== 'void' || searchIsActive ) dispatch(fetchList)
     }, [])
 
     // wait for pagination to be set (depends on initial fetch resolving)
