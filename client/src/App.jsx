@@ -1,41 +1,20 @@
-import React, {Fragment, useEffect } from 'react'
-import { useDispatch, useSelector } from "react-redux"
+import React, {Fragment, Suspense, lazy } from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import {Redirect} from 'react-router-dom/cjs/react-router-dom.min';
 
-import { fetchList } from './features/list_feature'
-
 import Header from './components/layout/Header/Header'
 import CreateEmployee from './components/containers/Create-employee'
-import ListPage from './components/containers/List-page'
+
 import NotFoundPage from './components/containers/404'
 import HomePage from './components/containers/Home-page';
 
-import { GlobalStyle, LoadingSpinnerWrapper } from './style/global_style'
+import { GlobalStyle } from './style/global_style'
 
-// spinner
-import { css } from "@emotion/react"
-import ClipLoader from "react-spinners/ClipLoader"
-const override = css`
-    display: block;
-    margin: 0 auto;
-    border-color: fuchsia;
-`;
+
+// import ListPage from './components/containers/List-page'
+const ListPage = lazy(() => import('./components/containers/List-page'));
 
 const App = () => {
-
-    const dispatch = useDispatch()
-    const listStatus = useSelector(initialState => initialState.list.status)
-    const pages = useSelector(initialState => initialState.list.collectionAsPages)
-
-    useEffect(()=> {
-        if (listStatus !== 'resolved') dispatch(fetchList)
-    }, [dispatch, listStatus])
-
-    // wait for pagination to be set (depends on initial fetch resolving)
-    let proceed = false;
-    if ( listStatus === 'pending' || listStatus === 'updating' ) { return 'loading' }
-    else if ( listStatus === 'resolved') { pages?.length > 0 ? proceed=true:proceed=false; }
 
     return (
         <div className="App">
@@ -44,8 +23,8 @@ const App = () => {
                     <Router>
                         <Header /> {/* INSIDE router because contains NAV with 'LINK TO'  */}
 
-                        { proceed ?
-                            <Fragment>
+                        <Fragment>
+                            <Suspense fallback={<div>Loading...</div>}>
                                 <Switch>
                                     <Route exact path="/"  render={() => <Redirect to="/home" />} />
                                     <Route exact path="/home" component={HomePage} />
@@ -53,9 +32,8 @@ const App = () => {
                                     <Route exact path="/employees-list" component={ListPage} />
                                     <Route component={NotFoundPage} />
                                 </Switch>
-                            </Fragment>
-                        : <LoadingSpinnerWrapper><ClipLoader css={override} size={100} /><p>Loading...</p></LoadingSpinnerWrapper>
-                        }
+                            </Suspense>
+                        </Fragment>
 
                     </Router>
 
