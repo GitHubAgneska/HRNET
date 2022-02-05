@@ -23,7 +23,7 @@ const ListPage = () => {
     // list will fetch/refetch if listStatus or postStatus change
     useEffect(()=> {
         if (listStatus !== 'resolved' || postStatus !== 'void' ) dispatch(fetchList)
-    })
+    }, [])
 
     // wait for pagination to be set (depends on initial fetch resolving)
     let proceed = false;
