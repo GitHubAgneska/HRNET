@@ -1,11 +1,12 @@
 const Employee = require('../models/Employee')
 
+// CREATE EMPLOYEE REQUEST
 module.exports.createEmployee = async employeeData => {
     try {
         const employee = await Employee.findOne({ lastName: employeeData.lastName })
         if (employee) { throw new Error('employee with this name already exists') }
 
-        // ISSUE HERE : 'await' makes password NULL and prevents request to succeed
+        // ISSU@E HERE : 'await' makes password NULL and prevents request to succeed
         // Postman err : '400 - Error: data and salt arguments required' 
         // ( see https://stackoverflow.com/questions/45015613/error-data-and-salt-arguments-required/45015918)
         // const hashPassword = await bcrypt.hash(employeeData.password, 12)

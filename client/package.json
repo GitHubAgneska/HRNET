@@ -69,6 +69,7 @@
     "@types/react-redux": "7.1.19",
     "json-loader": "^0.5.7",
     "lodash": "^4.17.21",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "standard": "^16.0.4"
   }
 }
